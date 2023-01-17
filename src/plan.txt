@@ -1,0 +1,15 @@
+Book Shelf App
+
+Dependicies:
+    - json server for api function as backend server
+    - axios for html requests
+    - redux for state management (react, react-redux)
+    - reacr router dom for navigation
+
+Work Flow:
+    - create json-server as data storage
+    - create a global axios file in which axios is used as an instance object
+    - redux file three
+        - decide the states in the store (books and categories)
+    - create router file three
+    - load bootstrap as UI library
