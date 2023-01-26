@@ -1,27 +1,22 @@
 {
   "books": [
-      {
-          "id": "1",
-          "name": "x",
-          "author":"y z",
-          "publisher": " d books",
-          "isbn": "12345",
-          "categoryId": "1"
-      }
+    {
+      "id": "1",
+      "name": "x",
+      "author": "y z",
+      "publisher": " d books",
+      "isbn": "12345",
+      "categoryId": "1"
+    }
   ],
-  
-  "categories" : [
-      {
-          "id":"1", 
-          "name": "novell"
-      },
-      {
-          "id":"2", 
-          "name": "science function"
-      },
-      {
-          "id":"2", 
-          "name": "love"
-      }
+  "categories": [
+    {
+      "id": "1",
+      "ad": "Novell"
+    },
+    {
+      "id": "2",
+      "ad": "Siir"
+    }
   ]
 }

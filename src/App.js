@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import actionsTypes from "./redux/actions/actionTypes"
 
 import HomePage from "./pages/HomePage";
@@ -12,6 +12,7 @@ import urls from "./api/urls"
 
 function App() {
   const dispatch = useDispatch()
+  const {booksState, categoriesState} = useSelector(state=> state)
 
   useEffect(()=> {
     /* fetch books */
@@ -25,8 +26,22 @@ function App() {
     .catch((err)=>{
       dispatch({type:actionsTypes.bookActions.GET_BOOKS_FAIL, payload:"An error occured at the server"})
     })
+
+    /* fetch categories*/
+    dispatch({type:actionsTypes.categoryActions.GET_CATEGORIES_START})
+    api
+      .get(urls.categories)
+      .then((res)=> {
+        dispatch({type:actionsTypes.categoryActions.GET_CATEGORIES_SUCCESS,payload:res.data})
+
+      })
+      .catch((err)=> {
+        dispatch({type:actionsTypes.categoryActions.GET_CATEGORIES_FAIL, payload:"An error occured at the server"})
+      })
+
   }, [])
 
+  
   return (
     <BrowserRouter>
       <Routes>

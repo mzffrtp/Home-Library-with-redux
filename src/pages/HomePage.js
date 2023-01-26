@@ -2,17 +2,17 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import Header from "../components/Header";
+import { ListBooks } from "../components/ListBooks";
 
 
 const HomePage = () => {
 
-    const {booksState} = useSelector(state=>state);
-    console.log(booksState);
-
+    const {booksState, categoriesState} = useSelector(state=>state);
+   
     return (
         <div>
             < Header />
-            <p>Home Page</p>
+            <ListBooks />
         </div>
     )
 
