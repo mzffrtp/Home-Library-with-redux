@@ -1,0 +1,11 @@
+.addBook {
+    width:50px;
+    position: relative;
+}
+
+.addBookImg{
+    position: absolute;
+    top:-20px;
+    right:-550px;
+   
+}

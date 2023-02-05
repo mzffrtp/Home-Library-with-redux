@@ -7,16 +7,48 @@
       "publisher": " d books",
       "isbn": "12345",
       "categoryId": "1"
+    },
+    {
+      "id": "1675565987683",
+      "name": "asd",
+      "author": "asd",
+      "publisher": "asd",
+      "isbn": "asd",
+      "categoryId": "1"
+    },
+    {
+      "id": "1675566263818",
+      "name": "dog",
+      "author": "pdf",
+      "publisher": "ben ben",
+      "isbn": "67",
+      "categoryId": "2"
+    },
+    {
+      "id": "1675566381665",
+      "name": "3",
+      "author": "s",
+      "publisher": "sd",
+      "isbn": "as",
+      "categoryId": "2"
+    },
+    {
+      "id": "1675566652674",
+      "name": "4",
+      "author": "sd",
+      "publisher": "asd",
+      "isbn": "asd",
+      "categoryId": "1"
     }
   ],
   "categories": [
     {
       "id": "1",
-      "ad": "Novell"
+      "name": "Novell"
     },
     {
       "id": "2",
-      "ad": "Siir"
+      "name": "Siir"
     }
   ]
 }

@@ -1,24 +1,21 @@
-import React, {useState} from "react";
-
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import api from "../api/api";
 import urls from "../api/urls";
 import actionTypes from "../redux/actions/actionTypes";
 import CustomModal from "./CustomModal";
 
-
-
-
 const Book = () => {
 
-    const { booksState, categoriesState } = useSelector(state => state)
+    const { booksState, categoriesState } = useSelector((state) => state)
     const dispatch = useDispatch();
     const [showModel, setShowModel] = useState(false);
     const [deleteConfirm, setDeleteConfirm] = useState("")
 
     const deleteBook = (id) => {
-        
+
         dispatch({ type: actionTypes.bookActions.DELETE_BOOK_START });
         api
             .delete(`${urls.books}/${id}`)
@@ -26,7 +23,7 @@ const Book = () => {
                 dispatch({
                     type: actionTypes.bookActions.DELETE_BOOK_SUCCESS,
                     payload: id
-                })
+                });
             })
             .catch((err) => {
                 dispatch({
@@ -34,7 +31,7 @@ const Book = () => {
                     payload: "An error occured when deleting"
                 });
             });
-    }
+    };
 
     return (
         <div className="container my-3 d-flex flex-column">
@@ -45,7 +42,6 @@ const Book = () => {
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Author</th>
-                        <th scope="col">Category</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -59,7 +55,6 @@ const Book = () => {
                                 <th scope="row">{index + 1}</th>
                                 <td>{book.name}</td>
                                 <td>{book.author}</td>
-                                <td>{categoryBook.ad}</td>
                                 <td>
                                     <div className="d-grid gap-1 d-md-flex justify-content-center">
                                         <button
@@ -76,10 +71,10 @@ const Book = () => {
                                             type="button"
                                             style={{ fontSize: "0.7rem" }} >Update</button>
 
-                                        <button
+                                        <Link to={`/book-details/${book.id}`}
                                             className="btn btn-outline-primary btn-sm mx-1"
                                             type="button"
-                                            style={{ fontSize: "0.7rem" }} >Details</button>
+                                            style={{ fontSize: "0.7rem" }} >Details</Link>
                                     </div>
                                 </td>
                             </tr>
@@ -89,13 +84,14 @@ const Book = () => {
             </table>
             {
                 showModel === true && (
-                    <CustomModal 
-                    title="Delete" 
-                    message="Are you sure?"
-                    onCancel={()=> setShowModel(false)}
-                    onConfirm ={()=> {
-                        deleteBook(deleteConfirm)
-                    setShowModel(false)}} 
+                    <CustomModal
+                        title="Delete"
+                        message="Are you sure?"
+                        onCancel={() => setShowModel(false)}
+                        onConfirm={() => {
+                            deleteBook(deleteConfirm)
+                            setShowModel(false)
+                        }}
                     />
                 )
             }

@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import actionsTypes from "./redux/actions/actionTypes"
 
 import HomePage from "./pages/HomePage";
+import BookDetails from "./pages/BookDetails";
+import AddBook  from "./pages/AddBook";
 
 import api from "./api/api"
 import urls from "./api/urls"
@@ -46,6 +48,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element = {<HomePage />} />
+        <Route path="/book-details/:bookId" element = {<BookDetails />} />
+        <Route path="/add-book" element = {<AddBook />} />
+
+
       </Routes>
     </BrowserRouter>
   );

@@ -59,6 +59,12 @@ const booksreducer = (state=initialState,action) => {
                 fail: true,
                 error: action.payload
                     }
+                
+                case actionTypes.bookActions.ADD_BOOK:
+                    return{
+                        ...state,
+                        book:[...state.books,action.payload]
+                    }
         default:
             return state
     }
