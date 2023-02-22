@@ -1,43 +1,27 @@
 {
   "books": [
     {
-      "id": "1",
-      "name": "x",
-      "author": "y z",
-      "publisher": " d books",
-      "isbn": "12345",
-      "categoryId": "1"
-    },
-    {
-      "id": "1675565987683",
-      "name": "asd",
-      "author": "asd",
-      "publisher": "asd",
-      "isbn": "asd",
-      "categoryId": "1"
-    },
-    {
-      "id": "1675566263818",
-      "name": "dog",
-      "author": "pdf",
-      "publisher": "ben ben",
-      "isbn": "67",
+      "id": "1677102213032",
+      "name": "Ali veli deneme kacinci",
+      "author": "ben ben",
+      "publisher": "pdf",
+      "isbn": "567890",
       "categoryId": "2"
     },
     {
-      "id": "1675566381665",
-      "name": "3",
-      "author": "s",
-      "publisher": "sd",
-      "isbn": "as",
-      "categoryId": "2"
+      "id": "1677102466555",
+      "name": "ucuncu",
+      "author": "deli ogolan",
+      "publisher": "pdf",
+      "isbn": "23",
+      "categoryId": "1"
     },
     {
-      "id": "1675566652674",
-      "name": "4",
-      "author": "sd",
-      "publisher": "asd",
-      "isbn": "asd",
+      "id": "1677103025764",
+      "name": "dorduncu",
+      "author": "dorduncu Levent",
+      "publisher": "add",
+      "isbn": "45",
       "categoryId": "1"
     }
   ],

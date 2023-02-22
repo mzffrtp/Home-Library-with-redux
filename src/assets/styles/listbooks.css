@@ -5,7 +5,13 @@
 
 .addBookImg{
     position: absolute;
-    top:-20px;
+    top:50px;
     right:-550px;
-   
 }
+
+@media screen and (min-width: 590px) {
+    .addBookImg{
+        position: absolute;
+        top:50px;
+        right: -1350px;
+    }}

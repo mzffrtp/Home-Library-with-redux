@@ -63,13 +63,14 @@ const BookDetails = () => {
                 <div className="toBackImg">
                     <Link to={"/"}
                         style={{ color: "orange", textDecoration: "none" }}
-                    > <img src={back} /></Link>
+                    > <img src={back} alt=""/></Link>
                 </div>
             </div>
             <div className="d-flex justify-content-center">
                 <img
                     src={reading}
-                    style={{ width: "400px" }} />
+                    style={{ width: "400px" }}
+                    alt="" />
             </div>
 
         </div>

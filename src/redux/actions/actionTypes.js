@@ -11,7 +11,8 @@ const actionTypes = {
         DELETE_BOOK_SUCCESS: "DELETE_BOOK_SUCCESS",
         DELETE_BOOK_FAIL: "DELETE_BOOK_FAIL",
 
-        ADD_BOOK: "ADD_BOOK"
+        ADD_BOOK: "ADD_BOOK",
+        EDIT_BOOK: "EDIT_BOOK"
     },
 
     categoryActions:{

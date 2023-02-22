@@ -8,6 +8,7 @@ import actionsTypes from "./redux/actions/actionTypes"
 import HomePage from "./pages/HomePage";
 import BookDetails from "./pages/BookDetails";
 import AddBook  from "./pages/AddBook";
+import EditBook from "./pages/EditBook";
 
 import api from "./api/api"
 import urls from "./api/urls"
@@ -15,6 +16,8 @@ import urls from "./api/urls"
 function App() {
   const dispatch = useDispatch()
   const {booksState, categoriesState} = useSelector(state=> state)
+
+
 
   useEffect(()=> {
     /* fetch books */
@@ -41,8 +44,10 @@ function App() {
         dispatch({type:actionsTypes.categoryActions.GET_CATEGORIES_FAIL, payload:"An error occured at the server"})
       })
 
-  }, [])
+  },[])
 
+  if (booksState.success === false || categoriesState.success === false)
+    return null;
   
   return (
     <BrowserRouter>
@@ -50,6 +55,8 @@ function App() {
         <Route path="/" element = {<HomePage />} />
         <Route path="/book-details/:bookId" element = {<BookDetails />} />
         <Route path="/add-book" element = {<AddBook />} />
+        <Route path="/edit-book/:bookId" element = {<EditBook />} />
+
 
 
       </Routes>
