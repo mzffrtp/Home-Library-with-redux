@@ -27,12 +27,15 @@ const Header = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item d-flex">
+                            <li className="nav-item d-flex justify-content-center gap-5">
                                 <Link className="nav-link active" style={{fontSize:"1.2rem"}} to="/">
                                     Book Listing
                                 </Link>
                                 <Link className="nav-link active" style={{fontSize:"1.2rem"}} to="/add-book">
                                     Add Book
+                                </Link>
+                                <Link className="nav-link active" style={{fontSize:"1.2rem"}} to="/category-actions">
+                                    Category Actions
                                 </Link>
                             </li>
                         </ul>

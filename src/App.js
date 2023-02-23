@@ -9,6 +9,8 @@ import HomePage from "./pages/HomePage";
 import BookDetails from "./pages/BookDetails";
 import AddBook  from "./pages/AddBook";
 import EditBook from "./pages/EditBook";
+import CategoryActions from "./pages/CategoryActions";
+import AddCategory from "./pages/AddCategory";
 
 import api from "./api/api"
 import urls from "./api/urls"
@@ -56,6 +58,8 @@ function App() {
         <Route path="/book-details/:bookId" element = {<BookDetails />} />
         <Route path="/add-book" element = {<AddBook />} />
         <Route path="/edit-book/:bookId" element = {<EditBook />} />
+        <Route path="/category-actions" element = {<CategoryActions />}/>
+        <Route path="/add-category" element={<AddCategory />}/>
 
 
 

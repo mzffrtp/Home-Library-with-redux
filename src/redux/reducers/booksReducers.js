@@ -63,11 +63,11 @@ const booksreducer = (state = initialState, action) => {
         case actionTypes.bookActions.ADD_BOOK:
             return {
                 ...state,
-                book: [...state.books, action.payload]
+                books: [...state.books, action.payload]
             }
 
         case actionTypes.bookActions.EDIT_BOOK:
-            let temp = [];
+            var temp = [];
             for (let i = 0; i < state.books.length; i++) {
                 if (state.books[i].id !== action.payload.id) {
                     temp.push(state.books[i]);
@@ -77,8 +77,15 @@ const booksreducer = (state = initialState, action) => {
             }
             return {
                 ...state,
-                book: temp,
-            };
+                books: temp,
+            }
+
+        case actionTypes.bookActions.DELETE_BOOK_AFTER_CATEGORY_DELETE:
+            var temp = state.books.filter(item => item.categoryId !== action.payload)
+            return {
+                ...state,
+                books: temp,
+            }
 
         default:
             return state

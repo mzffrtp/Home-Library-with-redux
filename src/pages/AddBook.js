@@ -11,7 +11,7 @@ import urls from "../api/urls";
 
 const AddBook = () => {
 
-    const {categoriesState } = useSelector(state => state);
+    const { categoriesState } = useSelector(state => state);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -33,18 +33,17 @@ const AddBook = () => {
 
         api
             .post(urls.books, form)
-            .then((res)=>{
+            .then((res) => {
                 dispatch({
-                    type:actionTypes.bookActions.ADD_BOOK,
-                    payload:form,
+                    type: actionTypes.bookActions.ADD_BOOK,
+                    payload: form,
                 });
                 navigate("/")
-                window.location.reload();
+                window.location.reload()
+
 
             })
-            .catch((err)=>{
-                console.log(err);
-            })
+            .catch((err) => { })
     }
 
     return (
@@ -53,8 +52,8 @@ const AddBook = () => {
             <div className="container my-3">
                 <div className="d-flex justify-content-center">
                     <img src={add}
-                        style={{ width: "120px" }} 
-                        alt=""/>
+                        style={{ width: "120px" }}
+                        alt="" />
                 </div>
                 <form
                     onSubmit={handleSubmit}
@@ -109,8 +108,6 @@ const AddBook = () => {
                     </div>
                 </form>
             </div>
-
-
         </div>
 
 

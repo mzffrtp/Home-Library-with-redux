@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const Book = () => {
     const dispatch = useDispatch();
     const [showModel, setShowModel] = useState(false);
     const [deleteConfirm, setDeleteConfirm] = useState("");
-    
+
 
     const deleteBook = (id) => {
 
@@ -44,8 +44,9 @@ const Book = () => {
                     style={{ border: "none", background: "beige", height: "2.5rem" }}
                     type={"text"}
                     placeholder="please type for search..."
-                     />
+                />
             </div>
+
             <table className="table table-light table-striped table-hover table-sm caption-top table-bordered border-info">
                 <caption>List of books</caption>
                 <thead className="table-warning text-center ">
@@ -53,19 +54,16 @@ const Book = () => {
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Author</th>
-                        <th scope="col">Categories</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody className="table-group-divider">
-                    {booksState.books.map((book, index) => {                    
-                        const categoryBook = categoriesState.categories.find((eachBook) => eachBook.id === book.categoryId);
+                    {booksState.books.map((book, index) => {
                         return (
                             <tr className="align-middle" key={book.id}>
                                 <th scope="row">{index + 1}</th>
                                 <td>{book.name}</td>
                                 <td>{book.author}</td>
-                                <td>{}</td>
                                 <td>
                                     <div className="d-grid gap-1 d-md-flex justify-content-center">
                                         <button
@@ -104,6 +102,26 @@ const Book = () => {
                             setShowModel(false)
                         }}
                     />
+                )
+            }
+            {
+                categoriesState.categories.length === 0 && (
+                    <div
+                        className="container d-flex flex-column mt-5 gap-3 align-items-center"
+                        style={{ color: "orangered", fontSize: "1.5rem" }}
+                        to={"/add-category"}>
+                            <span
+                                style={{ color: "black"
+                            }}
+                                >&#128549; No books are recorded for now. </span>
+                        A category must be added before adding a book becomes possible!
+                        <Link
+                            to={"/add-category"}
+                            className="btn btn-info mt-3"
+                        > Click to add a category!
+                        </Link>
+                    </div>
+
                 )
             }
         </div>

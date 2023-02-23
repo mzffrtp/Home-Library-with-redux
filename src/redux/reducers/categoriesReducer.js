@@ -33,7 +33,19 @@ const categoriesReducer = (state=initialState,action) => {
                 fail: true,
                 error: action.payload
             }
-            
+        
+        case actionTypes.categoryActions.ADD_CATEGORIES:
+            return{
+                ...state,
+                categories: [...state.categories, action.payload]
+            }
+        
+            case actionTypes.categoryActions.DELETE_CATEGORIES:
+                var filteredCategory = state.categories.filter(item=>item.id !== action.payload)
+                return{
+                    ...state,
+                    categories:filteredCategory,
+                }
         default:
             return state
     }
