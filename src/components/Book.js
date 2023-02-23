@@ -111,8 +111,7 @@ const Book = () => {
                         style={{ color: "orangered", fontSize: "1.5rem" }}
                         to={"/add-category"}>
                             <span
-                                style={{ color: "black"
-                            }}
+                                style={{ color: "black"}}
                                 >&#128549; No books are recorded for now. </span>
                         A category must be added before adding a book becomes possible!
                         <Link
