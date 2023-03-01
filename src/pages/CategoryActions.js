@@ -49,7 +49,8 @@ const CategoryActions = () => {
                         <img
                             className="my-1"
                             style={{ width: "30px" }}
-                            src={add} />
+                            src={add} 
+                            alt="#"/>
                         <p
                             style={{ color: "orangered", fontSize: "1.5rem" }}>Add Category</p>
                     </Link>

@@ -1,4 +1,30 @@
 {
-  "books": [],
-  "categories": []
+  "books": [
+    {
+      "id": "1677699672203",
+      "name": "kitap 2",
+      "author": "yazar 2",
+      "publisher": "yayinevi 2",
+      "isbn": "234",
+      "categoryId": "1677699636847"
+    },
+    {
+      "id": "1677699701074",
+      "name": "kitap 3",
+      "author": "yazar 3",
+      "publisher": "kitapevi 3",
+      "isbn": "34",
+      "categoryId": "1677699641596"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1677699636847",
+      "name": "epik siirler"
+    },
+    {
+      "id": "1677699641596",
+      "name": "deneme"
+    }
+  ]
 }

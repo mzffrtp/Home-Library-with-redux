@@ -14,6 +14,8 @@ const actionTypes = {
         ADD_BOOK: "ADD_BOOK",
         EDIT_BOOK: "EDIT_BOOK",
         DELETE_BOOK_AFTER_CATEGORY_DELETE: "DELETE_BOOK_AFTER_CATEGORY_DELETE"
+
+
     },
 
     categoryActions:{
@@ -24,9 +26,7 @@ const actionTypes = {
 
         ADD_CATEGORIES: "ADD_CATEGORIES",
         DELETE_CATEGORIES: "DELETE_CATEGORIES",
-
-
-
+        EDIT_CATEGORIES: "EDIT_CATEGORIES"
     }
 }
 

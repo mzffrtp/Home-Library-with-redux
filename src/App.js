@@ -11,6 +11,7 @@ import AddBook  from "./pages/AddBook";
 import EditBook from "./pages/EditBook";
 import CategoryActions from "./pages/CategoryActions";
 import AddCategory from "./pages/AddCategory";
+import EditCategory from "./pages/EditCategory";
 
 import api from "./api/api"
 import urls from "./api/urls"
@@ -60,6 +61,7 @@ function App() {
         <Route path="/edit-book/:bookId" element = {<EditBook />} />
         <Route path="/category-actions" element = {<CategoryActions />}/>
         <Route path="/add-category" element={<AddCategory />}/>
+        <Route path="/edit-category/:categoryId" element={<EditCategory />} />
 
 
 

@@ -10,7 +10,6 @@ import CustomModal from "./CustomModal";
 const Book = () => {
 
     const { booksState, categoriesState } = useSelector((state) => state)
-    console.log(booksState);
     const dispatch = useDispatch();
     const [showModel, setShowModel] = useState(false);
     const [deleteConfirm, setDeleteConfirm] = useState("");
