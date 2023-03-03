@@ -6,6 +6,7 @@ import api from "../api/api";
 import urls from "../api/urls";
 import actionTypes from "../redux/actions/actionTypes";
 import CustomModal from "./CustomModal";
+import { upperfirstletter } from "../utils/functions";
 
 const Book = () => {
 
@@ -61,8 +62,8 @@ const Book = () => {
                         return (
                             <tr className="align-middle" key={book.id}>
                                 <th scope="row">{index + 1}</th>
-                                <td>{book.name}</td>
-                                <td>{book.author}</td>
+                                <td>{upperfirstletter(book.name)}</td>
+                                <td>{upperfirstletter(book.author)}</td>
                                 <td>
                                     <div className="d-grid gap-1 d-md-flex justify-content-center">
                                         <button

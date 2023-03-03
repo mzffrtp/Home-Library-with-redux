@@ -7,6 +7,7 @@ import CustomModal from "../components/CustomModal";
 import api from "../api/api";
 import urls from "../api/urls";
 import actionTypes from "../redux/actions/actionTypes";
+import { upperfirstletter } from "../utils/functions";
 
 const CategoryActions = () => {
     const { booksState, categoriesState } = useSelector(state => state);
@@ -80,7 +81,7 @@ const CategoryActions = () => {
                                         return (
                                             <tr className="align-middle text-center" key={category.id}>
                                                 <th scope="row">{index + 1}</th>
-                                                <td>{category.name}</td>
+                                                <td>{upperfirstletter(category.name)}</td>
                                                 <td>
                                                     {books.length}
                                                 </td>

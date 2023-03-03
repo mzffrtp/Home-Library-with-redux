@@ -7,7 +7,8 @@ import Header from "../components/Header";
 
 import reading from "../assets/imgs/reading.png";
 import back from "../assets/imgs/back.png";
-import "../assets/styles/bookstyles.css"
+import "../assets/styles/bookstyles.css";
+import { upperfirstletter } from "../utils/functions";
 
 
 const BookDetails = () => {
@@ -45,15 +46,15 @@ const BookDetails = () => {
             <div className="container my-3 d-flex justify-content-center">
                 <div className="card" style={{ width: "18rem" }}>
                     <div className="card-body d-flex justify-content-center">
-                        <h3 className="card-title">{book.name}</h3>
+                        <h3 className="card-title">{upperfirstletter(book.name)}</h3>
                     </div>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item d-flex justify-content-center">
-                            <h5>Author:</h5>{book.author}</li>
+                            Author: {upperfirstletter(book.author)}</li>
                         <li className="list-group-item d-flex justify-content-center">
-                            Category: {bookCat.name}</li>
+                            Category: {upperfirstletter(bookCat.name)}</li>
                         <li className="list-group-item d-flex justify-content-center">
-                            Publisher: {book.publisher}</li>
+                            Publisher: {upperfirstletter(book.publisher)}</li>
                         <li className="list-group-item d-flex justify-content-center">
                             Isbn: {book.isbn}</li>
                     </ul>

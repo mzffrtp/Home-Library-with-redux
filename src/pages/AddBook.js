@@ -39,7 +39,6 @@ const AddBook = () => {
                     payload: form,
                 });
                 navigate("/")
-                window.location.reload()
 
 
             })
