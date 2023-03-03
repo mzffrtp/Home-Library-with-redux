@@ -16,7 +16,6 @@ export const ListBooks = () => {
  
     return (
         <div>
-            
             <Link to={"/add-book"} className="addBook">
                 <img className="addBookImg" src={add} alt="" />
             </Link>

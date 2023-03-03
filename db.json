@@ -1,34 +1,4 @@
 {
-  "books": [
-    {
-      "id": "1677839488749",
-      "name": "basta",
-      "author": "buyuk",
-      "publisher": "harf mi",
-      "isbn": "45",
-      "categoryId": "1677839435709"
-    },
-    {
-      "id": "1677839908548",
-      "name": "basta",
-      "author": "buyuk",
-      "publisher": "harf",
-      "isbn": "4353",
-      "categoryId": "1677839435709"
-    },
-    {
-      "id": "1677840144650",
-      "name": "basta buyuk harf",
-      "author": "basta ",
-      "publisher": "buy",
-      "isbn": "546",
-      "categoryId": "1677839435709"
-    }
-  ],
-  "categories": [
-    {
-      "id": "1677839435709",
-      "name": "deneme"
-    }
-  ]
+  "books": [],
+  "categories": []
 }
